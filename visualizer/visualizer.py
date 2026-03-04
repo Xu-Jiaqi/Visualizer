@@ -40,5 +40,5 @@ class get_local(object):
             cls.cache[key] = []
 
     @classmethod
-    def activate(cls, activate=True):
-        cls.is_activate = activate
+    def activate(cls):
+        cls.is_activate = True
