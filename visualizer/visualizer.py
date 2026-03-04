@@ -30,7 +30,7 @@ class get_local(object):
             res_values = func(*args, **kwargs)
             res, values = res_values[0], res_values[1:]
             for i,varname in enumerate(self.varnames):
-                type(self).cache[func.__qualname__+'_'+varname].append(values[i].detach().cpu())
+                type(self).cache[func.__qualname__+'.'+varname].append(values[i].detach().cpu())
             return res
         return wrapper
 
